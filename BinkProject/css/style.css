@@ -1,0 +1,581 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #e3f2fd;
+}
+
+
+/*  Navigation bar  css  */
+nav{
+  background: #000000;
+  height: 80px;
+  width: 100%;
+}
+
+
+.logo{
+  float:left;
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+nav ul{
+  float: right;
+  margin-right: 10px;
+
+}
+
+nav ul li{
+  display: inline-block;
+  line-height:  80px;
+  margin: 0 5px;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+nav a.active, a:hover{
+  background: #1b9bff;
+  transition: .55s;
+}
+
+#check{
+  display:none;
+}
+
+@media (max-width: 952px){
+
+  nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+  }
+
+  nav ul li a{
+    font-size: 16px;
+  }
+
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;    
+  }
+
+}
+
+
+
+
+/* Top section css */
+
+.top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-image: url(../images/dumbbell.jpg);    
+  padding-top: 300px;
+  padding-bottom: 300px;
+  width: 100%;
+} 
+
+
+.top .intro{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;   
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 1rem;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  
+  
+} 
+
+.introPar{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;  
+  text-align: center;
+  height: 1rem;  
+  width: 100%;
+  margin: 10px auto;  
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 200px;
+  padding-left:200px;
+  color:rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;  
+}
+
+.join{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height: 1rem;  
+  width: 50%;
+  margin: 0 auto;    
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color:rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;  
+}
+
+
+.joinbtn{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: #1b9bff;
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: .55s;
+  transition-property: box-shadow 1s ;
+  
+}
+
+.joinbtn:hover, .joinbtn:focus, .joinbtn:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+
+}
+
+
+@media (max-width:952px){
+  .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:150px;
+    padding-bottom: 150px;
+
+  }
+
+  .intro{
+    margin:5px;
+    font-size: small;
+    text-align: center;
+  }
+
+  .introPar{
+    padding: 10px;
+    
+  }
+
+  .joinbtn{
+    margin:0px;
+  }
+
+
+}
+
+/* middle section  */
+
+
+.middle{
+  max-width: 100%;
+  min-height: 300px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr;  
+  column-gap: 10px; 
+  row-gap: 10px;
+  background-color: #e3f2fd;  
+}
+
+.topLeftCube{
+  display: flex;
+  border-radius: 10px;  
+  padding: 20px;
+  margin: 25px 5px 5px 50px;   
+  max-width: 100%;
+  
+}
+
+
+.topLeftCube img{  
+  width: 100%;
+  border-radius: 10px ;  
+  object-fit: fill;
+}
+
+.topRightCube{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  border-radius: 5px;    
+  margin: 25px 50px 5px 5px;
+  padding: 50px;  
+  max-width: 100%;  
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bottomLeftCube{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  border-radius: 5px;  
+  padding: 20px;
+  width: auto; 
+  margin: 5px 5px 25px 50px;
+  padding: 50px; 
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.bottomRightCube{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border-radius: 5px; 
+  padding:20px;
+  width: auto; 
+  margin: 5px 50px 25px 5px;  
+}
+
+.bottomRightCube img{  
+  width: 100%;
+  border-radius: 10px ;  
+  object-fit: fill;
+}
+
+/*  cubeTitle affects about me section as well as middle */
+
+.cubeTitle{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 2em;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* for mobile screens */
+
+@media (max-width:952px) {
+  .middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .topRightCube{
+    margin:0px auto;
+    max-height: 400px;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .topLeftCube{    
+    margin:0px auto;
+    max-height: 400px;
+    max-width: 500px;
+    object-fit: fill;
+    width: 100%;
+  }
+
+  .bottomLeftCube{
+    margin: 0px auto;
+    max-height: 400px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottomRightCube{
+    margin:0px auto;    
+    max-height: 400px;
+    max-width: 500px;
+    object-fit: fill;
+    width: 100%;
+  }
+    
+}
+
+
+/* about css section  */
+
+
+.about{
+  display: flex;
+  justify-content: space-evenly ;
+  align-items: center;  
+  width: 100%;  
+  background-color: #e3f2fd;  
+}
+
+.leftPhoto img{ 
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  width: 100%;
+  object-fit: fill;
+  border-radius: 10px;  
+  margin-left: 20px;
+}
+
+.aboutMe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   
+  width: 100%;
+  margin-left:  30px;
+  padding: 25px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;  
+}
+
+@media (max-width:952px) {
+
+  .about{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;       
+    
+  }
+  .leftPhoto img{
+    margin: 0 auto;
+    max-height: 400px;
+    max-width: 500px;
+    object-fit: fill;
+    width: 90%;    
+  }
+
+  .aboutMe{
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+}
+
+/*  bottom section  */
+/*  need to add css for this section */
+
+.container {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f2fd;
+}
+.testimonial {
+  position: relative;  
+  width: 100%;
+  height: 90%;
+  padding: 50px 0;
+  overflow: hidden;
+  
+}
+.testimonial .image {
+  height: 270px;
+  width: 270px;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+.testimonial .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.slide{
+  width: 100%;
+  height: auto;
+}
+.slide p {
+  text-align: center;
+  justify-content: center;
+  padding: 0 160px;
+  font-size: 14px;
+  font-weight: 400;  
+  color: #1a1919;
+  font-family: 'Montserrat', sans-serif;
+    
+}
+
+.slide .quote-icon {
+  font-size: 30px;
+  color: #4070f4;
+}
+
+.slide .details {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+}
+
+.details .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.details .job {
+  
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* swiper button css */
+.nav-btn {
+  height: 40px;
+  width: 30px;
+  border-radius: 100%;
+  transform: translateY(30px);
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn::after,
+.nav-btn::before {
+  font-size: 20px;
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+  margin: 10px;
+  background-color: #4070f4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide p {
+    padding: 0 20px;
+  }
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* footer section   */
+
+.footer{
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover {
+  color:#fff;
+  background:none;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+
+  .footer p{
+    font-size: 10px;
+    color: #fff;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+  
+  
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
